@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Use free Font Awesome version -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="login.css" />
+    <title>Green Wheels</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="forms-container">
+        <div class="signin-signup">
+          <!-- Sign In Form -->
+          <form id="login-form" class="sign-in-form">
+            <h2 class="title">Sign in</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" placeholder="Username" id="login-username" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input
+                type="password"
+                placeholder="Password"
+                id="login-password"
+              />
+            </div>
+            <button type="submit" class="btn solid">Login</button>
+          </form>
+
+          <!-- Sign Up Form -->
+          <form action="#" class="sign-up-form">
+            <h2 class="title">Sign up</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" placeholder="Username" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-envelope"></i>
+              <input type="email" placeholder="Email" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" placeholder="Password" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" placeholder="Confirm Password" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-venus-mars"></i>
+              <div class="label-select">
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender">
+                  <option value="" disabled selected>Select your gender</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+            </div>
+            <div class="input-field">
+              <i class="fas fa-calendar-alt"></i>
+              <div class="label-select">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" value="" />
+              </div>
+            </div>
+            <div class="input-field">
+              <i class="fas fa-map-marker-alt"></i>
+              <div class="label-select">
+                <label for="city">City:</label>
+                <select id="city" name="city">
+                  <option value="" disabled selected>Select your city</option>
+                  <option value="Ariana">Ariana</option>
+                  <option value="Béja">Béja</option>
+                  <option value="Ben Arous">Ben Arous</option>
+                  <option value="Bizerte">Bizerte</option>
+                  <option value="Gabes">Gabes</option>
+                  <option value="Gafsa">Gafsa</option>
+                  <option value="Jendouba">Jendouba</option>
+                  <option value="Kairouan">Kairouan</option>
+                  <option value="Kasserine">Kasserine</option>
+                  <option value="Kebili">Kebili</option>
+                  <option value="Kef">Kef</option>
+                  <option value="Mahdia">Mahdia</option>
+                  <option value="Manouba">Manouba</option>
+                  <option value="Medenine">Medenine</option>
+                  <option value="Monastir">Monastir</option>
+                  <option value="Nabeul">Nabeul</option>
+                  <option value="Sfax">Sfax</option>
+                  <option value="Sidi Bouzid">Sidi Bouzid</option>
+                  <option value="Siliana">Siliana</option>
+                  <option value="Sousse">Sousse</option>
+                  <option value="Tataouine">Tataouine</option>
+                  <option value="Tozeur">Tozeur</option>
+                  <option value="Tunis">Tunis</option>
+                  <option value="Zaghouan">Zaghouan</option>
+                </select>
+              </div>
+            </div>
+            <button type="submit" class="btn">Sign up</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Panels Container -->
+      <div class="panels-container">
+        <div class="panel left-panel">
+          <div class="content">
+            <h3>New here?</h3>
+            <p>
+              Join our mission to keep streets clean with Robot Assistant—sign
+              up now to support our innovative robotic garbage collection
+              system!
+            </p>
+            <button class="btn transparent" id="sign-up-btn">Sign up</button>
+          </div>
+          <img
+            src="../img/bddd7c84-d78c-4c90-bd16-0a1931ee10e8-removebg-preview.png"
+            class="image"
+            alt="Welcome"
+          />
+        </div>
+        <div class="panel right-panel">
+          <div class="content">
+            <h3>One of us?</h3>
+            <button class="btn transparent" id="sign-in-btn">Sign in</button>
+          </div>
+          <img src="../img/robb.png" class="image" alt="Welcome Back" />
+        </div>
+      </div>
+    </div>
+
+    <script src="../backend/login.js"></script>
+
+    <script>
+      document.getElementById("login-form").addEventListener("submit", function (e) {
+        e.preventDefault();
+    
+        // Get username and password input values
+        const username = document.getElementById("login-username").value;
+        const password = document.getElementById("login-password").value;
+    
+        // Example: Mock login check (you can replace this with real logic)
+        if (username && password) {
+          // Save the username to localStorage
+          localStorage.setItem("loggedInUser", username);
+    
+          // Redirect to home page
+          window.location.href = "home.html";
+        } else {
+          alert("Please enter a valid username and password.");
+        }
+      });
+    </script>
+    
+  </body>
+</html>

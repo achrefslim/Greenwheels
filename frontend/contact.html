@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Robot Assistant</title>
+    <link rel="stylesheet" href="contact.css" />
+    <script src="contact.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>
+
+        Robot Assistant
+           
+        </h1>
+        <nav class="navbar">
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="#contact-info">Social Media</a></li>
+            <li><a href="#open-ticket">Open Ticket</a></li>
+            <li><a href="contact.html">About us</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero-section">
+        <div class="hero-text">
+          <p>
+            Reach out to us through social media or send us a ticket for any
+            issues.
+          </p>
+        </div>
+      </section>
+
+      <section id="contact-info" class="content-section">
+        <div class="container">
+          <h2>Social Media</h2>
+          <ul class="social-media">
+            <li>
+              <a
+                href="https://www.facebook.com/profile.php?id=61569568192677"
+                target="_blank"
+                >Facebook</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.facebook.com/profile.php?id=61569568192677"
+                target="_blank"
+                >Twitter</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.facebook.com/profile.php?id=61569568192677"
+                target="_blank"
+                >Instagram</a
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="open-ticket" class="content-section">
+        <div class="container">
+          <h2>Open a Ticket</h2>
+          <form id="ticket-form">
+            <label for="patient-name">Name:</label>
+            <input type="text" id="patient-name" required />
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required />
+
+            <label for="issue-type">Issue Type:</label>
+            <select id="issue-type" required>
+              <option value="technical">Technical Issue</option>
+              <option value="billing">Connection Issue</option>
+              <option value="appointment">Robot Problem</option>
+              <option value="other">Other</option>
+            </select>
+
+            <label for="description">Description:</label>
+            <textarea id="description" rows="4" required></textarea>
+
+            <button type="submit">Submit Ticket</button>
+          </form>
+          <div id="ticket-status" class="status-message"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2024 Robot Assistant. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

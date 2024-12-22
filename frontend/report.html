@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Garbage | Green Wheels</title>
+    <link rel="stylesheet" href="report.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">Report Garbage</div>
+        <form id="reportForm">
+            <!-- Full Name -->
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" placeholder="Enter your full name">
+            <div class="error-message" id="nameError">Full Name is required!</div>
+
+            <!-- Phone Number -->
+            <label for="phoneNumber">Phone Number</label>
+            <input type="tel" id="phoneNumber" placeholder="Enter your phone number">
+            <div class="error-message" id="phoneError">Phone Number is required!</div>
+
+            <!-- City -->
+            <label for="city">City</label>
+            <select id="city">
+                <option value="">Select your city</option>
+                <option value="Ariana">Ariana</option>
+                <option value="Béja">Béja</option>
+                <option value="Ben Arous">Ben Arous</option>
+                <option value="Bizerte">Bizerte</option>
+                <option value="Gabes">Gabes</option>
+                <option value="Gafsa">Gafsa</option>
+                <option value="Jendouba">Jendouba</option>
+                <option value="Kairouan">Kairouan</option>
+                <option value="Kasserine">Kasserine</option>
+                <option value="Kebili">Kebili</option>
+                <option value="Kef">Kef</option>
+                <option value="Mahdia">Mahdia</option>
+                <option value="Manouba">Manouba</option>
+                <option value="Medenine">Medenine</option>
+                <option value="Monastir">Monastir</option>
+                <option value="Nabeul">Nabeul</option>
+                <option value="Sfax">Sfax</option>
+                <option value="Sidi Bouzid">Sidi Bouzid</option>
+                <option value="Siliana">Siliana</option>
+                <option value="Sousse">Sousse</option>
+                <option value="Tataouine">Tataouine</option>
+                <option value="Tozeur">Tozeur</option>
+                <option value="Tunis">Tunis</option>
+                <option value="Zaghouan">Zaghouan</option>
+                <!-- Add all other Tunisian cities here -->
+            </select>
+            <div class="error-message" id="cityError">Please select your city!</div>
+
+            <!-- Comments -->
+            <label for="comments">Additional Comments</label>
+            <textarea id="comments" placeholder="Write any additional details..."></textarea>
+
+            <!-- Image Upload -->
+            <label for="image">Upload Garbage Image</label>
+            <input type="file" id="image" accept="image/*">
+            <div class="error-message" id="imageError">Image is required!</div>
+
+            <!-- Submit Button -->
+            <button type="button" onclick="validateForm()">Submit Report</button>
+        </form>
+    </div>
+
+    <script>
+        function validateForm() {
+            const fullName = document.getElementById("fullName").value.trim();
+            const phoneNumber = document.getElementById("phoneNumber").value.trim();
+            const city = document.getElementById("city").value;
+            const image = document.getElementById("image").files.length;
+
+            let isValid = true;
+
+            // Full Name Validation
+            if (!fullName) {
+                document.getElementById("nameError").style.display = "block";
+                isValid = false;
+            } else {
+                document.getElementById("nameError").style.display = "none";
+            }
+
+            // Phone Number Validation
+            if (!phoneNumber) {
+                document.getElementById("phoneError").style.display = "block";
+                isValid = false;
+            } else {
+                document.getElementById("phoneError").style.display = "none";
+            }
+
+            // City Validation
+            if (!city) {
+                document.getElementById("cityError").style.display = "block";
+                isValid = false;
+            } else {
+                document.getElementById("cityError").style.display = "none";
+            }
+
+            // Image Validation
+            if (image === 0) {
+                document.getElementById("imageError").style.display = "block";
+                isValid = false;
+            } else {
+                document.getElementById("imageError").style.display = "none";
+            }
+
+            // Final Validation Check
+            if (isValid) {
+                alert("Report submitted successfully!");
+                document.getElementById("reportForm").reset();
+                window.location.href = "home.html";
+            } else {
+                alert("Please fill all the required fields correctly.");
+            }
+        }
+    </script>
+</body>
+</html>

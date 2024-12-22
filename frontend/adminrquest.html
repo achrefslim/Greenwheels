@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Green Wheels</title>
+    <link rel="stylesheet" href="adminrquest.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">Admin Dashboard</div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Full Name</th>
+                    <th>Phone Number</th>
+                    <th>City</th>
+                    <th>Comments</th>
+                    <th>Garbage Image</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="requestsTable">
+                <!-- Requests will be dynamically added here -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        // Example requests (This can be replaced with real data from a database or API)
+        const requests = [
+            {
+                fullName: "achref slimen",
+                phoneNumber: "96423765",
+                city: "Tunis",
+                comments: "There is a lot of garbage on the street.",
+                image: "../img/FETHI BELAID_AFP via Getty Images Tunisia-Environment-Garbage.png"
+            },
+
+        ];
+
+        // Function to display requests
+        function displayRequests() {
+            const table = document.getElementById("requestsTable");
+            table.innerHTML = ""; // Clear existing rows
+
+            requests.forEach((request, index) => {
+                const row = document.createElement("tr");
+                row.innerHTML = `
+                    <td>${request.fullName}</td>
+                    <td>${request.phoneNumber}</td>
+                    <td>${request.city}</td>
+                    <td>${request.comments}</td>
+                    <td><img src="${request.image}" alt="Garbage Image" width="100" height="100"></td>
+                    <td>
+                        <button onclick="acceptRequest(${index})">Accept</button>
+                        <button onclick="refuseRequest(${index})">Refuse</button>
+                    </td>
+                `;
+                table.appendChild(row);
+            });
+        }
+
+        // Function to accept a request
+        function acceptRequest(index) {
+            alert(`Request from ${requests[index].fullName} has been accepted.`);
+            // Here you can add code to update the request status or notify the user
+        }
+
+        // Function to refuse a request
+        function refuseRequest(index) {
+            alert(`Request from ${requests[index].fullName} has been refused.`);
+            // Here you can add code to update the request status or notify the user
+        }
+
+        // Initialize the page by displaying the requests
+        window.onload = displayRequests;
+    </script>
+</body>
+</html>

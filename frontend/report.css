@@ -1,0 +1,99 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #e8f5e9; /* Light green background */
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Container Styling */
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Styling */
+.header {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #2e7d32; /* Dark green */
+    margin-bottom: 20px;
+}
+
+/* Form Elements */
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #2e7d32;
+}
+
+form input[type="text"],
+form input[type="tel"],
+form select,
+form textarea,
+form input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form input:focus,
+form textarea:focus,
+form select:focus {
+    outline: none;
+    border-color: #66bb6a; /* Focus color */
+    box-shadow: 0 0 5px #a5d6a7;
+}
+
+form textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+/* Error Messages */
+.error-message {
+    color: red;
+    font-size: 14px;
+    display: none;
+    margin-bottom: 10px;
+}
+
+/* Submit Button */
+button {
+    background-color: #2e7d32;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #1b5e20;
+    transition: background 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+}

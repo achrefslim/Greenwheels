@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About the Garbage Collecting Robot</title>
+  <link rel="stylesheet" href="aboutrobot.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+      <!-- Sidebar -->
+      <div class="sidebar" id="sidebar">
+        <h2>Green Wheels</h2>
+        <ul>
+          <li><a href="#overview"><i class="fas fa-eye"></i> <span>Overview</span></a></li>
+          <li><a href="#mobility"><i class="fas fa-cogs"></i> <span>Mobility</span></a></li>
+          <li><a href="#collect"><i class="fas fa-recycle"></i> <span>Collect System</span></a></li>
+          <li><a href="#how-to"><i class="fas fa-book"></i> <span>How to Use</span></a></li>
+          <li><a href="home.html"><i class="fas fa-book"></i> <span>Home</span></a></li>
+          <li><a href="contact.html"><i class="fas fa-book"></i> <span>Contact</span></a></li>
+        </ul>
+      </div>
+  
+      <!-- Toggle button -->
+      <div class="toggle-btn" onclick="toggleSidebar()">&#9776;</div>
+
+
+  <!-- Main Content -->
+  <div class="content" id="content">
+    <!-- Header Section -->
+    <header>
+      <h1>Welcome to the Garbage Collecting Robot</h1>
+      <p>Your solution to a cleaner environment!</p>
+    </header>
+
+    <!-- Video Section -->
+    <section id="video-section" class="video-section">
+      <h2>Watch the Robot in Action</h2>
+      <div class="video-container">
+        <video controls>
+          <source src="video/robot_demo.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section id="overview" class="overview">
+      <h2>Robot Overview</h2>
+      <div class="image-center">
+        <img src="../img/462571904_535615489247597_5874274032833066148_n-removebg-preview.png" alt="Robot Overview">
+      </div>
+    </section>
+
+    <!-- Mobility Section -->
+    <section id="mobility" class="feature-section">
+      <h2>Mobility System</h2>
+      <div class="feature-container">
+        <p>
+          The robot is designed with advanced wheels and suspension systems for smooth movement 
+          on roads and uneven surfaces. Its powerful motors ensure steady navigation in urban and rural environments.
+        </p>
+        <img src="../img/462563209_527237213405433_688516448725277347_n-removebg-preview.png" alt="Robot Mobility">
+      </div>
+    </section>
+
+    <!-- Collect Garbage Section -->
+    <section id="collect" class="feature-section">
+      <h2>Garbage Collecting System</h2>
+      <div class="feature-container">
+        <p>
+          The robot uses its mechanical arm to collect garbage and sorts it using a treadmill system. 
+          Plastics and cartons are placed into designated boxes, ensuring efficient waste management.
+        </p>
+        <img src="../img/462555545_1920705725080922_3688930312903978435_n-removebg-preview.png" alt="Robot Arm Collecting Garbage">
+      </div>
+    </section>
+
+    <!-- How to Use Section -->
+    <section id="how-to" class="how-to">
+      <h2>How to Use the Robot</h2>
+      <ol>
+        <li>🔸 **Step 1**: Turn on the robot using the **ON/OFF button**.</li>
+        <li>🔸 **Step 2**: Activate the **treadmill system** to start garbage sorting.</li>
+        <li>🔸 **Step 3**: Place the robot on the road. It will **automatically detect** and collect garbage.</li>
+        <li>🔸 **Step 4**: Monitor the robot's sorting process as it places plastics in one box and cartons in another.</li>
+        <li>🔸 **Step 5**: Once the task is complete, turn off the robot.</li>
+      </ol>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>Designed and Developed for a Cleaner Future | © 2024</p>
+    </footer>
+  </div>
+
+  <script>
+    // Sidebar toggle function
+    function toggleSidebar() {
+      const sidebar = document.getElementById("sidebar");
+      sidebar.classList.toggle("active");
+
+      const mainContent = document.querySelector(".main-content");
+      mainContent.classList.toggle("active");
+    }
+  </script>
+</body>
+</html>

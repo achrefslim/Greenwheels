@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Green Wheels</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../img/bddd7c84-d78c-4c90-bd16-0a1931ee10e8-removebg-preview.png"
+    />
+    <!-- Font Awesome icons (free version)-->
+    <script
+      src="https://use.fontawesome.com/releases/v6.3.0/js/all.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Google fonts-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i"
+      rel="stylesheet"
+    />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="home.css" rel="stylesheet" />
+
+        <!-- Inline CSS -->
+        <style>
+          /* Style for the Disconnect button */
+          .navbarDropdown{
+            background-color: rgba(0, 0, 0, 0.5); /* Black with 50% transparency */
+            color: #000000; /* White text */
+            border: none; /* No border */
+            text-align: center; /* Center align text */
+            border-radius: 5px; /* Rounded corners */
+            padding: 8px 12px; /* Button size */
+            transition: background-color 0.3s ease, color 0.3s ease;
+          }
+    
+          /* Hover Effect */
+          .dropdown-item:hover {
+            background-color: rgba(0, 0, 0, 0.8); /* Less transparency on hover */
+            color: #000000; /* Light gray text on hover */
+            cursor: pointer; /* Hand cursor on hover */
+          }
+    
+          /* Styling for dropdown container */
+          .dropdown {
+            position: relative;
+            display: inline-block;
+          }
+    
+          /* Dropdown content hidden by default */
+          .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #000000;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            border-radius: 5px;
+          }
+    
+          /* Show dropdown on hover */
+          .dropdown:hover .dropdown-content {
+            display: block;
+          }
+    
+          /* Dropdown link styling */
+          .dropdown-content a {
+            color: black;
+            padding: 8px 12px;
+            text-decoration: none;
+            display: block;
+          }
+    
+          .dropdown-content a:hover {
+            background-color: #000000;
+          }
+        </style>
+  </head>
+  <body id="page-top">
+    <!-- Sidebar -->
+    <div class="sidebar" id="mySidebar">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#scroll">learn more</a></li>
+        <li><a href="#buttons">Tools</a></li>
+        <li><a href="aboutrobot.html">How to Use!</a></li>
+        <li><a href="report.html">Report Garbage</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Sidebar Open/Close Button -->
+    <button class="sidebar-btn" onclick="toggleSidebar()">☰</button>
+
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+      <div class="container px-5">
+        <a class="navbar-brand" href="#page-top">Green Wheels</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ms-auto">
+            <!-- Login Button (Initially Visible) -->
+            <li class="nav-item" id="loginButton">
+              <a class="nav-link" href="login.html">Log In</a>
+            </li>
+
+            <!-- Username with Dropdown (Initially Hidden) -->
+            <li
+              class="nav-item dropdown"
+              id="userDropdown"
+              style="display: none"
+            >
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <span id="usernameDisplay">User</span>
+              </a>
+              <ul
+                class="dropdown-menu dropdown-menu-end"
+                aria-labelledby="navbarDropdown"
+              >
+                <li>
+                  <a class="dropdown-item" href="#" onclick="disconnectUser()"
+                    >Disconnect</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header-->
+    <header
+      class="masthead text-center text-white"
+      style="position: relative; overflow: hidden; height: 100vh"
+    >
+      <!-- Video Background -->
+      <video
+        autoplay
+        loop
+        muted
+        playsinline
+        style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        "
+      >
+        <source
+          src="../img/Lets Discover Tunisia  🇹🇳 (1).mp4"
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video>
+
+      <!-- Header Content -->
+      <div class="masthead-content" style="position: relative; z-index: 1">
+        <div class="container px-5">
+          <h1 class="masthead-heading mb-0">Green Wheels</h1>
+          <h2 class="masthead-subheading mb-0">Let's keep our tunisia Green</h2>
+          <a class="btn btn-primary btn-xl rounded-pill mt-5" href="#scroll"
+            >Learn More</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <!-- Content section 1-->
+    <section id="scroll">
+      <div class="container px-5">
+        <div class="row gx-5 align-items-center">
+          <div class="col-lg-6 order-lg-2">
+            <div class="p-5">
+              <img
+                class="img-fluid rounded-circle"
+                src="../img/DALL·E 2024-12-20 01.28.18 - A visual representation of pollution in Tunisia, showcasing a polluted urban landscape with smog and industrial emissions over the city of Tunis. The .webp"
+                alt="..."
+              />
+            </div>
+          </div>
+          <div class="col-lg-6 order-lg-1">
+            <div class="p-5">
+              <h2 class="display-4">
+                "Tunisia's Pollution Crisis: A Growing Threat to Health and
+                Environment"...
+              </h2>
+              <p>
+                Pollution in Tunisia is a rising concern, with urban areas like
+                Tunis experiencing air pollution levels that exceed World Health
+                Organization's safe limits. In 2020, PM2.5 levels in Tunis were
+                over 30% higher than recommended. Water bodies and beaches also
+                face pollution, worsened by inadequate waste management. This
+                environmental degradation is linked to an increase in
+                respiratory diseases, highlighting the urgent need for action to
+                address the crisis.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Content section 2-->
+    <section>
+      <div class="container px-5">
+        <div class="row gx-5 align-items-center">
+          <div class="col-lg-6">
+            <div class="p-5">
+              <img
+                class="img-fluid rounded-circle"
+                src="../img/bddd7c84-d78c-4c90-bd16-0a1931ee10e8-removebg-preview.png"
+                alt="..."
+              />
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="p-5">
+              <h2 class="display-4">
+                "Green Wheels: Revolutionizing Street Cleanliness with Smart
+                Garbage Collection"
+              </h2>
+              <p>
+                Green Wheels is an innovative robot designed to collect garbage
+                from the streets, ensuring cleaner environments and promoting
+                sustainability. The robot features a sophisticated system with a
+                container to store collected waste, an arm to pick up garbage,
+                and a conveyor belt to transport it to separate compartments for
+                recycling. Equipped with advanced sensors and cameras, Green
+                Wheels can identify and sort different types of waste, such as
+                plastic, paper, and organic materials, directing them to the
+                appropriate bins. With its sleek, truck-like design and
+                efficient functionality, Green Wheels is a powerful solution for
+                waste management, making urban spaces cleaner and greener.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Content section 3-->
+    <section>
+      <div class="container px-5">
+        <div class="row gx-5 align-items-center">
+          <div class="col-lg-6 order-lg-2">
+            <div class="p-5">
+              <img
+                class="img-fluid rounded-circle"
+                src="../img/aaaa.webp"
+                alt="..."
+              />
+            </div>
+          </div>
+          <div class="col-lg-6 order-lg-1">
+            <div class="p-5">
+              <h2 class="display-4">
+                Green Wheels platform: Effortless Control for a Cleaner Future
+              </h2>
+              <p>
+                The Green Wheels website is a user-friendly platform designed to
+                simplify the control and monitoring of the Green Wheels robot.
+                It allows users to easily operate the robot, track its progress,
+                and manage its features with just a few clicks. Packed with
+                innovative tools, the website offers real-time updates, detailed
+                analytics, and customizable settings to optimize garbage
+                collection efficiency. Discover a range of advanced
+                functionalities that make managing Green Wheels effortless,
+                ensuring cleaner streets and a greener future.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- New Section with 3 Image Buttons -->
+    <section id="buttons" class="content-section">
+      <div class="container">
+        <h2>Explore Our Resources</h2>
+        <button onclick="location.href='map.html'">
+          <img src="../img/map.png" alt="Map" />
+        </button>
+        <button onclick="location.href='road.html'">
+          <img src="../img/road map.png" alt="Road Map" />
+        </button>
+        <button onclick="location.href=''">
+          <img src="../img/tools.png" alt="Tools" />
+        </button>
+      </div>
+    </section>
+    <!-- Footer-->
+    <footer class="py-5 bg-black">
+      <div class="container px-5">
+        <p class="m-0 text-center text-white small">
+          Copyright &copy; Green Wheels 2024
+        </p>
+      </div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="../backend/home.js"></script>
+    <!-- Custom Sidebar Toggle JS -->
+    <script src="../backend/sidebar-toggle.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const username = localStorage.getItem("loggedInUser");
+        const loginButton = document.getElementById("loginButton");
+        const userDropdown = document.getElementById("userDropdown");
+        const usernameDisplay = document.getElementById("usernameDisplay");
+
+        // Function to simulate login
+        function setLoggedInUser(name) {
+          localStorage.setItem("loggedInUser", name);
+          showUsername(name);
+        }
+
+        // Show username and hide login button
+        function showUsername(name) {
+          usernameDisplay.textContent = `Welcome, ${name}`;
+          loginButton.style.display = "none";
+          userDropdown.style.display = "block";
+        }
+
+        // Simulate logout
+        window.disconnectUser = function () {
+          localStorage.removeItem("loggedInUser");
+          userDropdown.style.display = "none";
+          loginButton.style.display = "block";
+        };
+
+        // Check if user is logged in
+        if (username) {
+          showUsername(username);
+        }
+      });
+    </script>
+  </body>
+</html>
