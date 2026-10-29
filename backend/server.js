@@ -1,10 +1,11 @@
+require("dotenv").config();
 const express = require("express");
 const mysql = require("mysql2");
 const bodyParser = require("body-parser");
 const cors = require("cors"); // Import CORS middleware
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 // Middleware to parse incoming JSON
 app.use(bodyParser.json());
@@ -15,10 +16,10 @@ app.use(cors());
 
 // MySQL Database Connection
 const db = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "achref123",
-  database: "robot",
+  host: process.env.DB_HOST || "localhost",
+  user: process.env.DB_USER || "root",
+  password: process.env.DB_PASSWORD || "",
+  database: process.env.DB_NAME || "robot",
 });
 
 // Connect to Database
