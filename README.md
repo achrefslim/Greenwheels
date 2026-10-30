@@ -57,7 +57,7 @@ Greenwheels/
 |__ frontend/              HTML and CSS of every page
 |__ database/
 |   |  schema.sql          Creates the database and the users table
-|__ img/                   Images and video of the website
+|__ img/                   Images of the website (add your own hero.mp4, see below)
 |__ docs/                  Screenshots
 ```
 
@@ -77,6 +77,10 @@ npm start
 ```
 
 Open `frontend/login.html` in your browser. Full steps in [TUTORIAL.md](TUTORIAL.md).
+
+## Home page video
+
+The home page plays `img/hero.mp4` as a background video. It is not included because of copyright. Add any free video you are allowed to use (for example from [Pixabay Videos](https://pixabay.com/videos/)) and name it `hero.mp4`. Without it the header simply shows a dark background.
 
 ## Possible improvements
 
